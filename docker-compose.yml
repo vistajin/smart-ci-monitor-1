@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_PATH=/data/smart_ci_monitor.db
+    volumes:
+      - ./data:/data
+  # frontend: optional; typically run with npm start in dev
